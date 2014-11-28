@@ -46,7 +46,9 @@
       classie.add( overlay, 'close' );
       var onEndTransitionFn = function( ev ) {
         if( support.transitions ) {
-          if( ev.propertyName !== 'visibility' ) return;
+          if ( ev.propertyName !== 'visibility' ) {
+            return;
+          }
           this.removeEventListener( transEndEventName, onEndTransitionFn );
         }
         classie.remove( overlay, 'close' );

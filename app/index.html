@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="WunderChristmas advent calendar">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Starter Kit</title>
 
@@ -21,46 +21,81 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
     <!-- Page styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
+
   <body>
-    <header class="app-bar promote-layer">
+  <header class="app-bar promote-layer">
       <div class="app-bar-container">
-        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Web <strong>Starter Kit</strong></h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        <!-- e.g <button><i class="icon icon-star"></i></button> -->
-        </section>
+          <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+          <h1 class="logo">Wunder<strong>Christmas</strong> 2014</h1>
       </div>
-    </header>
+  </header>
 
-    <nav class="navdrawer-container promote-layer">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide.html">Style Guide</a></li>
-      </ul>
-    </nav>
+  <main>
+      <h2 id="hello">24 days of celebrating contributions to Drupal</h2>
 
-    <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
+      <div id="container">
+          <section id="calendar">
+              <ul>
+                  <li class="calendar__day active">
+                      <a href="#day01" class="trigger-overlay"><span class="day"><strong>1</strong></span></a>
+                  </li>
+                  <li class="calendar__day">
+                      <a href="#day02" class="trigger-overlay"><span class="day"><strong>2</strong></span></a>
+                  </li>
 
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide.html">Style Guide</a>.</p>
-    </main>
+                  <li class="calendar__day">
+                      <a href="#day03" class="trigger-overlay"><span class="day"><strong>3</strong></span></a>
+                  </li>
 
-    <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+                  <li class="calendar__day">
+                      <a href="#day04" class="trigger-overlay"><span class="day"><strong>4</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day05" class="trigger-overlay"><span class="day"><strong>5</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day06" class="trigger-overlay"><span class="day"><strong>6</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day07" class="trigger-overlay"><span class="day"><strong>7</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day08" class="trigger-overlay"><span class="day"><strong>8</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day09" class="trigger-overlay"><span class="day"><strong>9</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day10" class="trigger-overlay"><span class="day"><strong>10</strong></span></a>
+                  </li>
+              </ul>
+          </section>
+      </div>
+  </main>
+
+
+  <div class="overlay overlay-contentscale">
+      <button type="button" class="overlay-close icon icon-close"></button>
+      <div class="inner">
+          <h2><a href="http://www.wunderkraut.com/case-studies/burda-harpers-bazaar-magazine">Harper's Bazaar Magazine</a></h2>
+          <p>We gave Drupal an award winning luxury magazine site - responsive with unique advertising.</p>
+      </div>
+  </div>
+
+
+  <!-- build:js scripts/main.min.js -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

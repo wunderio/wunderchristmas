@@ -36,6 +36,21 @@ main {
   min-height: 100%;
 }
 
+
+.app-bar-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
@@ -46,6 +61,13 @@ main {
 
   body {
     overflow-y: scroll;
+  }
+  .app-bar-container {
+    display: block;
+    height: 130px;
+    max-width: 864px;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 }
 

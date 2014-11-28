@@ -98,7 +98,10 @@ main {
     padding-top: 0;
     min-height: initial;
   }
-
+  .logo-image {
+    float: left;
+    margin-left: 50px;
+  }
   body {
     overflow-y: scroll;
   }

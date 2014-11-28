@@ -19,56 +19,27 @@
 (function () {
   'use strict';
 
-  /*
-   var querySelector = document.querySelector.bind(document);
-
-   var navdrawerContainer = querySelector('.navdrawer-container');
-   var body = document.body;
-   var appbarElement = querySelector('.app-bar');
-   var menuBtn = querySelector('.menu');
-   var main = querySelector('main');
-
-   function closeMenu() {
-   body.classList.remove('open');
-   appbarElement.classList.remove('open');
-   navdrawerContainer.classList.remove('open');
-   }
-
-   function toggleMenu() {
-   body.classList.toggle('open');
-   appbarElement.classList.toggle('open');
-   navdrawerContainer.classList.toggle('open');
-   navdrawerContainer.classList.add('opened');
-   }
-
-   // main.addEventListener('click', closeMenu);
-   menuBtn.addEventListener('click', toggleMenu);
-   /* navdrawerContainer.addEventListener('click', function (event) {
-   if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-   closeMenu();
-   }
-   }); */
-
-
   /* Overlay */
   var container = document.getElementById( 'container' ),
-    triggerBttn = document.querySelector( '.trigger-overlay' ),
-    overlay = document.querySelector( 'div.overlay' ),
-    closeBttn = overlay.querySelector( 'button.overlay-close' );
-
-  var transEndEventNames = {
-    'WebkitTransition': 'webkitTransitionEnd',
-    'MozTransition': 'transitionend',
-    'OTransition': 'oTransitionEnd',
-    'msTransition': 'MSTransitionEnd',
-    'transition': 'transitionend'
-  };
+      transEndEventNames = {
+        'WebkitTransition': 'webkitTransitionEnd',
+        'MozTransition': 'transitionend',
+        'OTransition': 'oTransitionEnd',
+        'msTransition': 'MSTransitionEnd',
+        'transition': 'transitionend'
+      };
 
   var transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ];
   var support = { transitions : Modernizr.csstransitions };
 
-  function toggleOverlay(event) {
-    console.log(event);
+  function toggleOverlay(e) {
+    e.preventDefault();
+    var overlaySelector = this.getAttribute('overlay');
+    var overlay = document.querySelector( '.overlay-' + overlaySelector );
+    if (!overlay) {
+      return;
+    }
+
     if( classie.has( overlay, 'open' ) ) {
       classie.remove( overlay, 'open' );
       classie.remove( container, 'overlay-open' );
@@ -93,6 +64,7 @@
     }
   }
 
-  triggerBttn.addEventListener( 'click', toggleOverlay );
-  closeBttn.addEventListener( 'click', toggleOverlay );
+  Gator(document).on('click', '.trigger-overlay', toggleOverlay);
+  Gator(document).on('click', '.overlay-close', toggleOverlay);
+
 })();

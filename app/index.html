@@ -39,42 +39,42 @@
           <section id="calendar">
               <ul>
                   <li class="calendar__day active">
-                      <a href="#day01" class="trigger-overlay"><span class="day"><strong>1</strong></span></a>
+                      <a href="#day01" overlay="day01" class="trigger-overlay"><span class="day"><strong>1</strong></span></a>
                   </li>
-                  <li class="calendar__day">
-                      <a href="#day02" class="trigger-overlay"><span class="day"><strong>2</strong></span></a>
-                  </li>
-
-                  <li class="calendar__day">
-                      <a href="#day03" class="trigger-overlay"><span class="day"><strong>3</strong></span></a>
+                  <li class="calendar__day active">
+                      <a href="#day02" overlay="day02" class="trigger-overlay"><span class="day"><strong>2</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day04" class="trigger-overlay"><span class="day"><strong>4</strong></span></a>
+                      <a href="#day03" overlay="day03" class="trigger-overlay"><span class="day"><strong>3</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day05" class="trigger-overlay"><span class="day"><strong>5</strong></span></a>
+                      <a href="#day04" overlay="day04" class="trigger-overlay"><span class="day"><strong>4</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day06" class="trigger-overlay"><span class="day"><strong>6</strong></span></a>
+                      <a href="#day05" overlay="day05" class="trigger-overlay"><span class="day"><strong>5</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day07" class="trigger-overlay"><span class="day"><strong>7</strong></span></a>
+                      <a href="#day06" overlay="day06" class="trigger-overlay"><span class="day"><strong>6</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day08" class="trigger-overlay"><span class="day"><strong>8</strong></span></a>
+                      <a href="#day07" overlay="day07" class="trigger-overlay"><span class="day"><strong>7</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day09" class="trigger-overlay"><span class="day"><strong>9</strong></span></a>
+                      <a href="#day08" overlay="day08" class="trigger-overlay"><span class="day"><strong>8</strong></span></a>
                   </li>
 
                   <li class="calendar__day">
-                      <a href="#day10" class="trigger-overlay"><span class="day"><strong>10</strong></span></a>
+                      <a href="#day09" overlay="day09" class="trigger-overlay"><span class="day"><strong>9</strong></span></a>
+                  </li>
+
+                  <li class="calendar__day">
+                      <a href="#day10" overlay="day10" class="trigger-overlay"><span class="day"><strong>10</strong></span></a>
                   </li>
               </ul>
           </section>
@@ -82,11 +82,19 @@
   </main>
 
 
-  <div class="overlay overlay-contentscale">
-      <button type="button" class="overlay-close icon icon-close"></button>
+  <div class="overlay overlay-contentscale overlay-day01">
+      <button type="button" overlay="day01" class="overlay-close icon icon-close"></button>
       <div class="inner">
           <h2><a href="http://www.wunderkraut.com/case-studies/burda-harpers-bazaar-magazine">Harper's Bazaar Magazine</a></h2>
           <p>We gave Drupal an award winning luxury magazine site - responsive with unique advertising.</p>
+      </div>
+  </div>
+
+  <div class="overlay overlay-contentscale overlay-day02">
+      <button type="button" overlay="day02" class="overlay-close icon icon-close"></button>
+      <div class="inner">
+          <h2>Day 2</h2>
+          <p>We gave Drupal ...</p>
       </div>
   </div>
 

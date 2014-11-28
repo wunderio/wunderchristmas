@@ -73,6 +73,15 @@ main {
 .logo-image img {
   max-width: 100%;
 }
+// Wunderchristmas does not wrap
+@media all and (max-width: 450px) {
+  .logo {
+    @include type--xlarge;
+  }
+  .logo-image {
+    width: 60px;
+  }
+}
 
 /** Large Screens - tablets **/
 @media all and (min-width: 550px) {

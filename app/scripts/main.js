@@ -72,8 +72,52 @@
   if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
       FastClick.attach(document.body);
+
+      try {
+        if( (window['console'] !== undefined) ){
+        console.log("" +
+"                   -+yo`               \n" +
+"                  -oyyyys.              \n" +
+"                `+yyyyyyys`\n" +
+"               `syyyyyyyyy/\n" +
+"   ----.`      oyyyyyyyyyys   `.--::.\n" +
+"  `yyyyyyyo/` -yyyyyyyyy/.`-+syyyyyyo\n" +
+"   syyyyyyyy. +yyyyyyy/``+yyyyyyyyyy/\n" +
+"   :yyyyyyyy. +yyyyyo` /yyyyyyyyyyyy`   \n" +
+"    +yyyyyyy: :yyyyo` oyyyyyyyyyyyy:\n" +
+"     /yyyyyys `syyy` +yyyyyyyyyyys-\n" +
+"      .oyyyyy/ .yy+ `yyyyyyyyyyy/`\n" +
+"        `/oyyy/ .s- -yyyyyyys+-         \n" +
+"           `.:/- `` .////:-`            \n" +
+"              .-://///:-`               \n" +
+"          -+shhhhhhhhyyyyyo/.\n" +
+"       .+hhhhhhhhhhyyyyyyyyyys/`\n" +
+"     `ohhhhhhhhhhyyyyyyyyyyyyyys/`\n" +
+"    :hhhhhhhhhyyyyyyyyyyyyyyyyyyys.\n" +
+"   :hhhhhhhhyyyyyyyyyyyyyyyyyyyyyss.\n" +
+"  .hhhhhhhhyyyyyyyyyyyyyyyyyyyyyssss\n" +
+"  ohhhhhyyyyyyyyyyyyyyyyyyyyyyssssss:\n" +
+"  yhhhyyyyyyyyyyyyyyyyyyyyyyssssssss+\n" +
+"  hhhyyyyyyyyyyyyyyyyyyyyysssssssssso\n" +
+"  oyyyyyyyyyyyyyyyyyyyyyssssssssssss/\n" +
+"  -yyyyyyyyyyyyyyyyyyyssssssssssssss`   \n" +
+"   +yyyyyyyyyyyyyyyysssssssssssssss:\n" +
+"    +yyyyyyyyyyyyyssssssssssssssss:\n" +
+"     -syyyyyyyyysssssssssssssssso.      \n" +
+"      `/syyyyysssssssssssssssso-        \n" +
+"        `/sysssssssssssssssso-          \n" +
+"          `/sssssssssssssso-            \n" +
+"            `:sssssssssso-              \n" +
+"              `:sssssso-                \n" +
+"                `:sso-                  \n" +
+"                  `-\n\n\n"+
+" Knock, knock.\n" +
+" Follow the rabbit :)\n\n" +
+" Contact us, get ready to fly http://www.wunderkraut.com/get-ready-to-fly \n\n\n");
+        }
+      } catch(e) {}
+
     }, false);
   }
 
 })();
-

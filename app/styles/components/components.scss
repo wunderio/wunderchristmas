@@ -11,31 +11,9 @@
 // Icons - Leave it here to otherfiles can extend if needed
 @import '_components/_icons';
 
-// Color Palette
-@import '_palette';
-
 // Components
-@import '_components/_grid';
 @import '_components/_typography';
-@import '_components/_button';
-@import '_components/_list';
-@import '_components/_link';
-@import '_components/_table';
-@import '_components/_media';
-@import '_components/_breadcrumb';
-@import '_components/_subsection-title';
-@import '_components/_articles-list';
-@import '_components/_guides-list';
-@import '_components/_icon-circle';
 
 // Custom components for WunderChristmas
 @import '_components/_overlay';
 @import '_components/_calendar';
-
-
-// Pages
-@import '_pages/_styleguide';
-@import '_pages/_page-resources';
-
-// Make sure this is last to override anything else :)
-@import '_helper';

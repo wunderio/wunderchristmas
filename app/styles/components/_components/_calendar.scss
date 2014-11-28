@@ -24,11 +24,19 @@
   opacity:0.6;
   &.active {
     opacity:1;
+    a {
+      cursor:pointer;
+    }
+    &:hover{
+      background:#E10075;
+    }
   }
   &:hover {
-    background:black;
+    opacity:1;
+    background: rgba(0,0,0,0.2);
   }
   a {
+    cursor: default;
     display: block;
     width: 100%;
     height: 100%;

@@ -34,6 +34,7 @@ main {
   /* Height of the header */
   padding: 60px 16px 16px 16px;
   min-height: 100%;
+  color:white;
 }
 
 
@@ -95,21 +96,16 @@ main {
 
 
 header {
+  background:white;
   /* background:url(../images/bg-wrap.jpg) no-repeat 50% 0; */
-  background: -webkit-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #EB3349 10%, #F45C43 90%); /* W3C */
 }
 
 body {
-  background: -webkit-linear-gradient(90deg, #1e4c73 10%, #243949 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #1e4c73 10%, #243949 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #1e4c73 10%, #243949 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #1e4c73 10%, #243949 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #1e4c73 10%, #243949 90%); /* W3C */
-  color:white;
+  background: -webkit-linear-gradient(90deg, #45555F 10%, #3f4855 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #45555F 10%, #3f4855 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #45555F 10%, #3f4855 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #45555F 10%, #3f4855 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #45555F 10%, #3f4855 90%); /* W3C */
 }
 
 

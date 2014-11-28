@@ -1,74 +1,35 @@
-/* Overlay style */
+$overlay-color: rgba(153,204,51,0.9);
+
 .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(153,204,51,0.9);
-}
-.overlay .inner {
-  max-width: 400px;
-  margin:0 auto;
-  text-align:center;
-  a {
-    color:white;
+  background: $overlay-color;
+  .inner {
+    max-width: 500px;
+    margin:0 auto;
+    text-align:center;
+    a {
+      color:white;
+    }
   }
 }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: -120px;
   overflow: hidden;
   border: none;
   outline: none;
   z-index: 100;
-  font-size:75px;
-  background:rgba(100,100,100,0.2);
-}
-
-/* Menu style */
-.overlay nav {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  height: 60%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  height: 100%;
-  position: relative;
-}
-
-.overlay ul li {
-  display: block;
-  height: 20%;
-  height: calc(100% / 5);
-  min-height: 54px;
-}
-
-.overlay ul li a {
-  font-size: 54px;
-  font-weight: 300;
-  display: block;
-  color: #fff;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-  color: #f0f0f0;
+  font-size:65px;
+  background: $overlay-color;
 }
 
 #container {
@@ -83,8 +44,8 @@
 
 .overlay-contentscale {
   visibility: hidden;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+  -webkit-transform: translateY(120%); /* 120%, so it hides also the close button */
+  transform: translateY(120%);
   -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
   transition: transform 0.5s, visibility 0s 0.5s;
 }
@@ -97,12 +58,10 @@
   transition: transform 0.5s;
 }
 
-@media screen and (max-height: 30.5em) {
-  .overlay nav {
-    height: 70%;
-    font-size: 34px;
-  }
-  .overlay ul li {
-    min-height: 34px;
+/** Larger Screens - desktops and tablets **/
+@media all and (min-width: 990px) {
+  .overlay .overlay-close {
+    top: 20px;
+    background:rgba(100,100,100,0.2);
   }
 }

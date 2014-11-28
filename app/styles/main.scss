@@ -63,6 +63,11 @@ main {
 #hello, .logo {
   text-align:center;
 }
+.logo-image {
+  width: 50px;
+  float: left;
+}
+
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {

@@ -113,7 +113,7 @@
 "                `:sso-                  \n" +
 "                  `-\n\n\n"+
 " Knock, knock.\n" +
-" Follow the rabbit :)\n\n" +
+" Follow the white rabbit :)\n\n" +
 " Contact us, get ready to fly http://www.wunderkraut.com/get-ready-to-fly \n\n\n");
         }
       } catch(e) {}

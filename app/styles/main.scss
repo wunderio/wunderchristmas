@@ -103,13 +103,15 @@ main {
   body {
     overflow-y: scroll;
   }
-  .app-bar-container,
-  .footer-container{
+  .app-bar-container {
     display: block;
     height: 130px;
     max-width: $widerContainer;
     padding: 0 16px;
     box-sizing: border-box;
+  }
+  .footer-container{
+    max-width: $widerContainer;
   }
 
   #container {

@@ -15,6 +15,9 @@ $overlay-color: $WunderGreen;
     a {
       color:white;
     }
+    h3{
+      padding:15px 0 20px 0;
+    }
   }
 }
 
@@ -29,8 +32,12 @@ $overlay-color: $WunderGreen;
   outline: none;
   z-index: 100;
   font-size:65px;
-  background: $overlay-color;
+  background-color: $overlay-color;
+  background-image: url('/images/close.png');
   right: 0;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: 12px 10px;
 }
 @media all and (min-width: 800px) {
   .overlay .overlay-close {
@@ -69,6 +76,6 @@ $overlay-color: $WunderGreen;
 @media all and (min-width: 990px) {
   .overlay .overlay-close {
     top: 20px;
-    background:rgba(100,100,100,0.2);
+    background-color:rgba(100,100,100,0.2);
   }
 }

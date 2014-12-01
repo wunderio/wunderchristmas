@@ -32,9 +32,10 @@ body {
 main {
   margin: 0 auto;
   /* Height of the header */
-  padding: 60px 16px 16px 16px;
   min-height: 100%;
   color:white;
+  margin-bottom: 100px;
+  overflow:hidden;
 }
 
 
@@ -97,6 +98,7 @@ main {
     max-width: $widerContainer;
     padding-top: 0;
     min-height: initial;
+    padding: 60px 16px 16px 16px;
   }
   .logo-image {
     float: left;
@@ -105,7 +107,8 @@ main {
   body {
     overflow-y: scroll;
   }
-  .app-bar-container {
+  .app-bar-container,
+  .footer-container{
     display: block;
     height: 130px;
     max-width: $widerContainer;
@@ -136,6 +139,10 @@ body {
 footer {
   margin:0 auto;
   background:white;
+  padding:15px;
+  .footer-container{
+    margin: 0 auto;
+  }
   .wunderkraut-logo,
   .wunderroot-logo{
     display:inline-block;

@@ -31,8 +31,6 @@ body {
 
 main {
   margin: 0 auto;
-  /* Height of the header */
-  min-height: 100%;
   color:white;
   margin-bottom: 100px;
   overflow:hidden;
@@ -96,8 +94,6 @@ main {
 @media all and (min-width: 990px) {
   main {
     max-width: $widerContainer;
-    padding-top: 0;
-    min-height: initial;
     padding: 60px 16px 16px 16px;
   }
   .logo-image {
@@ -139,14 +135,14 @@ body {
 footer {
   margin:0 auto;
   background:white;
-  padding:15px;
+  padding:15px 15px 25px 0;
   .footer-container{
     margin: 0 auto;
   }
   .wunderkraut-logo,
   .wunderroot-logo{
     display:inline-block;
-    padding:20px 20px 0 0;
+    padding:20px 10px 0 10px;
     text-align:center;
     img {
       max-height:30px;
@@ -154,8 +150,18 @@ footer {
   }
   .content-footer {
     clear:both;
+    padding:10px;
     p {
       font-size:0.9em;
     }
+  }
+  .wunderkraut-twitter {
+    float:right;
+    text-decoration: none;
+    color: #3F4855;
+    font-size:0.9em;
+    font-weight:bold;
+    padding:26px 10px 10px 10px;
+    display:block;
   }
 }

@@ -32,8 +32,9 @@ body {
 main {
   margin: 0 auto;
   color:white;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   overflow:hidden;
+  padding: 30px 16px 16px 16px;
 }
 
 
@@ -94,7 +95,6 @@ main {
 @media all and (min-width: 990px) {
   main {
     max-width: $widerContainer;
-    padding: 60px 16px 16px 16px;
   }
   .logo-image {
     float: left;

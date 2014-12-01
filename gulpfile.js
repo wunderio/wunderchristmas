@@ -28,6 +28,8 @@ var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
 var deploy = require('gulp-gh-pages');
+var cache = require('gulp-cache');
+
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -40,6 +42,11 @@ var AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
+
+// Task to fix an issue with vinyl 
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
+});
 
 // Lint JavaScript
 gulp.task('jshint', function () {

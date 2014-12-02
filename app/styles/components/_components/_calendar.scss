@@ -21,7 +21,7 @@
   display: inline;
   overflow: hidden;
   list-style: none;
-  opacity:0.6;
+  opacity:0.3;
   &.active {
     opacity:1;
     a {
@@ -55,4 +55,30 @@
   font-size:56px;
   line-height: 58px;
   text-align:center;
+}
+
+
+.animated {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
 }

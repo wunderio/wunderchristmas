@@ -37,6 +37,13 @@
     var overlaySelector = this.getAttribute('overlay');
     var overlay = document.querySelector( '.overlay-' + overlaySelector );
     if (!overlay) {
+        classie.add(this,'animated');
+        classie.add(this,'shake');
+        var that = this;
+        setTimeout(function(){
+          classie.remove(that,'animated');
+          classie.remove(that,'shake');
+        },900);
       return;
     }
 

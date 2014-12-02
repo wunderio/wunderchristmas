@@ -70,7 +70,10 @@
     else if( !classie.has( overlay, 'close' ) ) {
       classie.add( overlay, 'open' );
       classie.add( container, 'overlay-open' );
-      _gaq.push(['_trackEvent', 'Calendar - Day', 'Open', overlaySelector]);
+      // analytics
+      if (typeof ga !== 'undefined'){
+        ga('send', 'event', 'Calendar Day', 'open', overlaySelector);
+      }
     }
   }
 

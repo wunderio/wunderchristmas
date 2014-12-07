@@ -8,8 +8,10 @@
 
 #calendar ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  text-align: center;
 }
 
 .calendar__day {
@@ -17,8 +19,7 @@
   position: relative;
   width: 130px;
   height: 125px;
-  float: left;
-  display: inline;
+  display: inline-block;
   overflow: hidden;
   list-style: none;
   opacity:0.3;

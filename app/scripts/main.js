@@ -77,8 +77,18 @@
     }
   }
 
+  function closeOverlay(e) {
+    if (e.keyCode == 27) { // esc
+      var overlayButton = document.querySelector( '.overlay.open .overlay-close' );
+      if(overlayButton) {
+        overlayButton.click();
+      }
+    }
+  }
+
   Gator(document).on('click', '.trigger-overlay', toggleOverlay);
   Gator(document).on('click', '.overlay-close', toggleOverlay);
+  Gator(document).on('keyup', closeOverlay);
 
   if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {

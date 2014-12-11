@@ -10,7 +10,10 @@
   padding: 0;
   margin: 0;
   line-height: 0;
-  text-align: center;
+  // Center days only once it goes down to three per row.
+  @media(max-width: 830px) {
+    text-align: center;
+  }
 }
 
 .calendar__day {

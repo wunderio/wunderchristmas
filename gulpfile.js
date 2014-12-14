@@ -43,7 +43,7 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
-// Task to fix an issue with vinyl 
+// Task to fix an issue with vinyl
 gulp.task('clear', function (done) {
   return cache.clearAll(done);
 });
@@ -189,7 +189,7 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://example.com',
+  url: 'https://wunderchristmas.com',
   strategy: 'mobile'
 }));
 

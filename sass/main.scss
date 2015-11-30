@@ -57,6 +57,7 @@ main {
   position:relative;
   margin:0 auto;
   text-align:left;
+  max-width: 42.1em;
 }
 
 #hello {
@@ -213,13 +214,6 @@ footer {
   }
 }
 
-/** Large Screens - tablets **/
-@media all and (min-width: 550px) {
-  #container {
-    padding:0 71px;
-  }
-}
-
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
@@ -267,8 +261,6 @@ footer {
     width:50%;
   }
 
-  #container {
-  }
   #mc_embed_signup {
     .newsletter-title {
       float:left;

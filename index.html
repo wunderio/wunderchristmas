@@ -50,6 +50,7 @@
           <section id="calendar">
               <ul>
                 {% for day in site.calendar_days | sort: 'date' %}
+                  {% assign active = false %}
                   {% if day.date <= site.time %}
                     {% assign active = true %}
                   {% endif %}

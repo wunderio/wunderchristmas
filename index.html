@@ -1,0 +1,132 @@
+---
+---
+ <!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="WunderChristmas advent calendar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WunderChristmas</title>
+    <meta name="description" content="24 days of celebrating contributions to Drupal">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WunderChristmas">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//use.typekit.net/fgo7lfj.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+  <header class="app-bar promote-layer">
+      <div class="app-bar-container">
+          <div class="logo-image">
+            <img src="images/wunderxmas.png" />
+          </div>
+          <h1 class="logo">Wunder<strong>Christmas 2014</strong></h1>
+      </div>
+  </header>
+
+  <main>
+      <h2 id="hello">24 Drupal highlights of our year</h2>
+
+      <div id="container">
+          <section id="calendar">
+              <ul>
+                {% for day in site.calendar_days | sort: 'date' %}
+                  <li class="calendar__day{% if day.active %} active{% endif %}"><a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ day.date }}</strong></span></a></li>
+                {% endfor %}
+              </ul>
+          </section>
+      </div>
+  </main>
+
+  <!-- OVERLAYS -->
+
+  {% for day in site.calendar_days %}
+    <div class="overlay overlay-contentscale overlay-day{{ day.date }}">
+      <div class="inner">
+        <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
+        <h3>{{ day.description }}</h3>
+        <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
+        <button type="button" overlay="day{{ day.date }}" class="overlay-close icon icon-close"></button>
+      </div>
+    </div>
+  {% endfor %}
+
+  <footer>
+      <div class="footer-container">
+          <div class="wunderkraut-links-wrapper">
+              <a href="http://wunderkraut.com" alt="Wunderkraut" class="wunderkraut-logo"><img src="images/logo.png" /></a>
+              <a href="http://wunderroot.co.uk" alt="WunderRoot"  class="wunderroot-logo"><img src="images/logo_wunderroot.png" /></a>
+          </div>
+
+          <div class="wunderkraut-twitter-wrapper">
+              <a href="https://twitter.com/wunderkraut" class="wunderkraut-twitter" alt="Wunderkraut in Twitter"><span class="twitter-icon"></span>@Wunderkraut</a>
+              <a href="https://twitter.com/wunderroot" class="wunderkraut-twitter" alt="WunderRoot in Twitter" ><span class="twitter-icon"></span>@WunderRoot</a>
+          </div>
+
+
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+
+              <form action="//wunderroot.us7.list-manage.com/subscribe/post?u=d09374620bd902054547d0baf&amp;id=3262a976d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div class="mailchimp-left">
+                      <div class="newsletter-title">Sign up for WunderNews!</div>
+                      <div class="plus-points">
+                          <span class="plus-icon">+</span> Event Announcements<br/>
+                          <span class="plus-icon">+</span> News<br/>
+                          <span class="plus-icon">+</span> Tips for Drupal & Agile working<br/>
+                      </div>
+
+                  </div>
+                  <div class="mailchimp-right">
+                      <div id="mc_embed_signup_scroll">
+                          <input type="email" value="" name="EMAIL" class="email" style="width:100%"  id="mce-EMAIL" placeholder="your email ..." required>
+                          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                          <div style="position: absolute; left: -5000px;"><input type="text" name="b_d09374620bd902054547d0baf_3262a976d0" tabindex="-1" value=""></div>
+                          <div class="clear"><input type="submit" style="width:100%"  value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+          <!--End mc_embed_signup-->
+          <div class="content-footer">
+              <p>Wunderkraut (known as Wunderroot in the UK) is Europe’s largest Drupal agency with 150 staff in nine countries. We build hundreds of Drupal sites each year, and contribute a lot to the Drupal community. In this advent calendar we wanted to celebrate some of this. <br/><strong>Happy Christmas!</strong></p>
+          </div>
+      </div>
+  </footer>
+  <!-- build:js scripts/main.min.js -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57194495-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  </body>
+</html>

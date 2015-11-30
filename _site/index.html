@@ -1,5 +1,3 @@
----
----
  <!doctype html>
 <html lang="">
   <head>
@@ -49,9 +47,11 @@
       <div id="container">
           <section id="calendar">
               <ul>
-                {% for day in site.calendar_days | sort: 'date' %}
-                  <li class="calendar__day active"><a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ day.date }}</strong></span></a></li>
-                {% endfor %}
+                
+                  <li class="calendar__day active"><a href="#day01" overlay="day01" class="trigger-overlay"><span class="day"><strong>01</strong></span></a></li>
+                
+                  <li class="calendar__day"><a href="#day02" overlay="day02" class="trigger-overlay"><span class="day"><strong>02</strong></span></a></li>
+                
               </ul>
           </section>
       </div>
@@ -59,16 +59,25 @@
 
   <!-- OVERLAYS -->
 
-  {% for day in site.calendar_days %}
-    <div class="overlay overlay-contentscale overlay-day{{ day.date }}">
+  
+    <div class="overlay overlay-contentscale overlay-day01">
       <div class="inner">
-        <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
-        <h3>{{ day.description }}</h3>
-        <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
-        <button type="button" overlay="day{{ day.date }}" class="overlay-close icon icon-close"></button>
+        <h2><a target="_blank" href="/calendar_days/01.html">Healthy Sprinting</a></h2>
+        <h3>We gave Drupal healthy contributors by providing healthy snacks at sprints.</h3>
+        <a target="_blank" class="more"  href="/calendar_days/01.html">find out more</a>
+        <button type="button" overlay="day01" class="overlay-close icon icon-close"></button>
       </div>
     </div>
-  {% endfor %}
+  
+    <div class="overlay overlay-contentscale overlay-day02">
+      <div class="inner">
+        <h2><a target="_blank" href="/calendar_days/02.html">Harper's Bazaar Magazine</a></h2>
+        <h3>We gave Drupal an award winning luxury magazine site - responsive with unique advertising.</h3>
+        <a target="_blank" class="more"  href="/calendar_days/02.html">find out more</a>
+        <button type="button" overlay="day02" class="overlay-close icon icon-close"></button>
+      </div>
+    </div>
+  
 
   <footer>
       <div class="footer-container">

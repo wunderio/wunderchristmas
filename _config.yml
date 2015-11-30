@@ -1,7 +1,3 @@
-# Folders
-source: app
-destination: dist
-
 # Dependencies
 markdown:         kramdown
 highlighter:      pygments

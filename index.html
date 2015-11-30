@@ -50,7 +50,13 @@
           <section id="calendar">
               <ul>
                 {% for day in site.calendar_days | sort: 'date' %}
-                  <li class="calendar__day{% if day.active %} active{% endif %}"><a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ day.date }}</strong></span></a></li>
+                  <li class="calendar__day{% if day.active %} active{% endif %}">
+                  {% if day.active %}
+                    <a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ day.date }}</strong></span></a>
+                    {% else %}
+                      <span class="day"><strong>{{ day.date }}</strong></span>
+                  {% endif %}
+                  </li>
                 {% endfor %}
               </ul>
           </section>

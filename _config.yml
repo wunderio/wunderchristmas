@@ -1,0 +1,28 @@
+# Folders
+source: app
+destination: dist
+
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            WunderChristmas
+url:              http://wunderchristmas.com
+
+author:
+  name:           Wunder UK
+  url:            https://wunder.uk
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/Wunderkraut/wunderchristmas
+  branch:         https://github.com/Wunderkraut/wunderchristmas/tree/gh-pages
+
+collections:
+- calendar_days

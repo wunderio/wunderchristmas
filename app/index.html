@@ -1,3 +1,5 @@
+---
+---
  <!doctype html>
 <html lang="">
   <head>
@@ -23,7 +25,7 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <!-- Page styles -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="//use.typekit.net/fgo7lfj.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -47,30 +49,9 @@
       <div id="container">
           <section id="calendar">
               <ul>
-                  <li class="calendar__day active"><a href="#day01" overlay="day01" class="trigger-overlay"><span class="day"><strong>1</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day02" overlay="day02" class="trigger-overlay"><span class="day"><strong>2</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day03" overlay="day03" class="trigger-overlay"><span class="day"><strong>3</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day04" overlay="day04" class="trigger-overlay"><span class="day"><strong>4</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day05" overlay="day05" class="trigger-overlay"><span class="day"><strong>5</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day06" overlay="day06" class="trigger-overlay"><span class="day"><strong>6</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day07" overlay="day07" class="trigger-overlay"><span class="day"><strong>7</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day08" overlay="day08" class="trigger-overlay"><span class="day"><strong>8</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day09" overlay="day09" class="trigger-overlay"><span class="day"><strong>9</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day10" overlay="day10" class="trigger-overlay"><span class="day"><strong>10</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day11" overlay="day11" class="trigger-overlay"><span class="day"><strong>11</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day12" overlay="day12" class="trigger-overlay"><span class="day"><strong>12</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day13" overlay="day13" class="trigger-overlay"><span class="day"><strong>13</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day14" overlay="day14" class="trigger-overlay"><span class="day"><strong>14</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day15" overlay="day15" class="trigger-overlay"><span class="day"><strong>15</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day16" overlay="day16" class="trigger-overlay"><span class="day"><strong>16</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day17" overlay="day17" class="trigger-overlay"><span class="day"><strong>17</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day18" overlay="day18" class="trigger-overlay"><span class="day"><strong>18</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day19" overlay="day19" class="trigger-overlay"><span class="day"><strong>19</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day20" overlay="day20" class="trigger-overlay"><span class="day"><strong>20</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day21" overlay="day21" class="trigger-overlay"><span class="day"><strong>21</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day22" overlay="day22" class="trigger-overlay"><span class="day"><strong>22</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day23" overlay="day23" class="trigger-overlay"><span class="day"><strong>23</strong></span></a></li>
-                  <li class="calendar__day active"><a href="#day24" overlay="day24" class="trigger-overlay"><span class="day"><strong>24</strong></span></a></li>
+                {% for day in site.calendar_days | sort: 'date' %}
+                  <li class="calendar__day active"><a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ day.date }}</strong></span></a></li>
+                {% endfor %}
               </ul>
           </section>
       </div>
@@ -78,150 +59,16 @@
 
   <!-- OVERLAYS -->
 
-  <div class="overlay overlay-contentscale overlay-day01"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/healthy-sprinting/2014-07-25">Healthy Sprinting</a></h2>
-      <h3>We gave Drupal healthy contributors by providing healthy snacks at sprints.</h3>
-      <a target="_blank" class="more"  href="http://www.wunderkraut.com/blog/healthy-sprinting/2014-07-25">find out more</a>
-      <button type="button" overlay="day01" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day02"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/case-studies/burda-harpers-bazaar-magazine">Harper's Bazaar Magazine</a></h2>
-      <h3>We gave Drupal an award winning luxury magazine site - responsive with unique advertising.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/case-studies/burda-harpers-bazaar-magazine">find out more</a>
-      <button type="button" overlay="day02" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day03"><div class="inner">
-      <h2><a target="_blank" href="http://wunderroot.co.uk/casestudy/what-happens-when-bbc-tells-74-million-people-about-website">Grow Wild</a></h2>
-      <h3>We gave Drupal 7.4m viewers on BBC Television, to help educate the public about wildflowers and give away hundreds of thousands of seed packets.</h3>
-      <a target="_blank" class="more" href="http://wunderroot.co.uk/casestudy/what-happens-when-bbc-tells-74-million-people-about-website">find out more</a>
-      <button type="button" overlay="day03" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day04"><div class="inner">
-      <h2><a target="_blank" href="http://wunderkraut.be/blog/belgian-election-fever">Belgian Election Fever</a></h2>
-      <h3>We gave Drupal a starring role in Democracy at the heart of Europe.</h3>
-      <a target="_blank" class="more" href="http://wunderkraut.be/blog/belgian-election-fever">find out more</a>
-      <button type="button" overlay="day04" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day05"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/bernts-drupal-gotchas/2014-01-21">Bernt’s Drupal Gotchas</a></h2>
-      <h3>We gave Drupal lots of useful tips for new developers.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/bernts-drupal-gotchas/2014-01-21">find out more</a>
-      <button type="button" overlay="day05" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day06"><div class="inner">
-      <h2><a target="_blank" href="https://www.youtube.com/watch?v=aOeFcIST474">Double-take at the Driesnote</a></h2>
-      <h3>We gave Drupal the gift of a second Dries (and a laugh) at Drupalcon Amsterdam.</h3>
-      <a target="_blank" class="more" href="https://www.youtube.com/watch?v=aOeFcIST474">find out more</a>
-      <button type="button" overlay="day06" class="overlay-close icon icon-close"></button>
-  </div></div>
-    <div class="overlay overlay-contentscale overlay-day07"><div class="inner">
-      <h2><a target="_blank" href="https://www.youtube.com/watch?v=JrfulSuUyNY">Using Docker For Drupal Development</a></h2>
-      <h3>We gave Drupal developers a video tutorial on using Docker.</h3>
-      <a target="_blank" class="more" href="https://www.youtube.com/watch?v=JrfulSuUyNY">find out more</a>
-      <button type="button" overlay="day07" class="overlay-close icon icon-close"></button>
-  </div></div>
-      <div class="overlay overlay-contentscale overlay-day08"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/case-studies/swiss-red-cross">The Red Cross</a></h2>
-      <h3>We gave Drupal a role in saving lives worldwide.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/case-studies/swiss-red-cross">find out more</a>
-      <button type="button" overlay="day08" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day09"><div class="inner">
-      <h2><a target="_blank" href="http://wunderroot.co.uk/blog/wunder-guide-drupal-8">Visual Guide to Drupal 8</a></h2>
-      <h3>We gave Drupal users a simple guide to what's coming in Drupal 8</h3>
-      <a target="_blank" class="more" href="http://wunderroot.co.uk/blog/wunder-guide-drupal-8">find out more</a>
-      <button type="button" overlay="day09" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day10"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/join-wunderkraut-at-drupalcon-amsterdam/2014-09-26">DrupalCon Amsterdam</a></h2>
-      <h3>We gave Drupal a host of talks at Drupalcon Amsterdam, as well as being one of the two main sponsors.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/join-wunderkraut-at-drupalcon-amsterdam/2014-09-26">find out more</a>
-      <button type="button" overlay="day10" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day11"><div class="inner">
-      <h2><a target="_blank" href="http://wunderkraut.be/our-work/myinvoice-carrefour">Carrefour commerce</a></h2>
-      <h3>We gave Drupal another retail success at Carrefour.</h3>
-      <a target="_blank" class="more" href="http://wunderkraut.be/our-work/myinvoice-carrefour">find out more</a>
-      <button type="button" overlay="day11" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day12"><div class="inner">
-      <h2><a target="_blank" href="https://www.youtube.com/watch?v=M12OWtb97LE">Open Sourcing the Drupal.org theme</a></h2>
-      <h3>We gave Drupal help in open sourcing the theme for its community website.</h3>
-      <a target="_blank" class="more" href="https://www.youtube.com/watch?v=M12OWtb97LE">find out more</a>
-      <button type="button" overlay="day12" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day13"><div class="inner">
-      <h2><a target="_blank" href="https://www.youtube.com/watch?v=PYPLqpNxjOU">Getting ready for Drupal 8</a></h2>
-      <h3>We gave Drupal developers tips on preparing for the new version of Drupal</h3>
-      <a target="_blank" class="more" href="https://www.youtube.com/watch?v=PYPLqpNxjOU">find out more</a>
-      <button type="button" overlay="day13" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day14"><div class="inner">
-      <h2><a target="_blank" href="https://www.youtube.com/watch?v=r3RRieO8uug">Drupal Dev Days</a></h2>
-      <h3>We gave Drupal a video postcard from Drupal Dev Days in Szeged</h3>
-      <a target="_blank" class="more" href="https://www.youtube.com/watch?v=r3RRieO8uug">find out more</a>
-      <button type="button" overlay="day14" class="overlay-close icon icon-close"></button>
-  </div></div>
-    <div class="overlay overlay-contentscale overlay-day15"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/case-studies/latvian-railway-concern-ldz-intranet">Open Source Intranet</a></h2>
-      <h3>We gave Drupal a role in helping the public sector railway in Latvia.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/case-studies/latvian-railway-concern-ldz-intranet">find out more</a>
-      <button type="button" overlay="day15" class="overlay-close icon icon-close"></button>
-  </div></div>
-    <div class="overlay overlay-contentscale overlay-day16"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/case-studies/organizeme-applying-expertise-and-experience-to-innovate-in-the-cloud">Drupal, HTML5 and Node.js</a></h2>
-      <h3>We gave Drupal a starring role in a cutting edge tech stack for an entrepreneurial start up.</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/case-studies/organizeme-applying-expertise-and-experience-to-innovate-in-the-cloud">find out more</a>
-      <button type="button" overlay="day16" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day17"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/growing-drupal-8-contributors-at-wunderkraut/2014-11-21">Contributing to Core</a></h2>
-      <h3>We gave Drupal some more core contributors</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/growing-drupal-8-contributors-at-wunderkraut/2014-11-21">find out more</a>
-      <button type="button" overlay="day17" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day18"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/configuration-entities-in-drupal-8/2014-07-14">Configuration Entities</a></h2>
-      <h3>We gave Drupal developers a guide to configuration entities in Drupal 8</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/configuration-entities-in-drupal-8/2014-07-14">find out more</a>
-      <button type="button" overlay="day18" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day19"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/introduction-to-customer-journey-mapping/2014-05-23">Customer Journey Mapping</a></h2>
-      <h3>We gave Drupal designers a guide to useful tools to understand user experience</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/introduction-to-customer-journey-mapping/2014-05-23">find out more</a>
-      <button type="button" overlay="day19" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day20"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/5-tips-to-debug-drupal-front-end-with-chrome-devtools/2014-04-16">Debugging Frontend Drupal</a></h2>
-      <h3>We gave Drupal frontend developers some tips on debugging</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/5-tips-to-debug-drupal-front-end-with-chrome-devtools/2014-04-16">find out more</a>
-      <button type="button" overlay="day20" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day21"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/10-interesting-talks-at-drupalcon-for-the-non-technical-crowd/2014-09-12">Interesting Drupalcon Talks for Non-Tech People</a></h2>
-      <h3>We gave Drupal community members who aren't technical a guide to talks that may interest them from the recent Drupalcon</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/10-interesting-talks-at-drupalcon-for-the-non-technical-crowd/2014-09-12">find out more</a>
-      <button type="button" overlay="day21" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day22"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/a-medium-like-editor-for-drupal/2014-12-20">Medium-like WYSIWYG Editor</a></h2>
-      <h3>We gave Drupal WYSIWYG integration for the Medium-like editor</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/a-medium-like-editor-for-drupal/2014-12-20">find out more</a>
-      <button type="button" overlay="day22" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day23"><div class="inner">
-      <h2><a target="_blank" href="https://amsterdam2014.drupal.org/news/drupalcon-frontend-developers">Drupalcon Content for Frontend Developers</a></h2>
-      <h3>We gave Drupal frontend developers a guide to great Drupalcon sessions for them</h3>
-      <a target="_blank" class="more" href="https://amsterdam2014.drupal.org/news/drupalcon-frontend-developers">find out more</a>
-      <button type="button" overlay="day23" class="overlay-close icon icon-close"></button>
-  </div></div>
-  <div class="overlay overlay-contentscale overlay-day24"><div class="inner">
-      <h2><a target="_blank" href="http://www.wunderkraut.com/blog/a-responsive-drupalorg/2014-12-22">Responsive Drupal.org</a></h2>
-      <h3>We gave Drupal time and love to make the Drupal.org theme responsive</h3>
-      <a target="_blank" class="more" href="http://www.wunderkraut.com/blog/a-responsive-drupalorg/2014-12-22">find out more</a>
-      <button type="button" overlay="day24" class="overlay-close icon icon-close"></button>
-  </div></div>
+  {% for day in site.calendar_days %}
+    <div class="overlay overlay-contentscale overlay-day{{ day.date }}">
+      <div class="inner">
+        <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
+        <h3>{{ day.description }}</h3>
+        <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
+        <button type="button" overlay="day{{ day.date }}" class="overlay-close icon icon-close"></button>
+      </div>
+    </div>
+  {% endfor %}
 
   <footer>
       <div class="footer-container">

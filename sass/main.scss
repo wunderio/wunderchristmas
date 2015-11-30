@@ -102,13 +102,17 @@ footer {
     width:100%;
   }
   .wunderkraut-logo,
-  .wunderroot-logo{
+  .wunderuk-logo{
     display:inline-block;
     padding:20px 10px 0 10px;
     text-align:center;
     img {
       max-height:30px;
     }
+  }
+  .wunderuk-logo {
+    position: relative;
+    top: -2px;
   }
   .content-footer {
     clear:both;
@@ -137,6 +141,7 @@ footer {
       -moz-background-size: 14px 11px;
       background-size: 14px 11px;
       display:inline-block;
+      vertical-align: middle;
     }
   }
 

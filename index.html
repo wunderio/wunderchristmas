@@ -75,9 +75,9 @@
       {% assign slugdate = day.date | date: "%d" %}
       <div class="overlay overlay-contentscale overlay-day{{ slugdate }}">
         <div class="inner">
-          <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
+          <h2><a target="_blank" href="{{ day.link }}">{{ day.title }}</a></h2>
           <h3>{{ day.description }}</h3>
-          <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
+          <a target="_blank" class="more"  href="{{ day.link }}">find out more</a>
           <button type="button" overlay="day{{ slugdate }}" class="overlay-close icon icon-close"></button>
         </div>
       </div>

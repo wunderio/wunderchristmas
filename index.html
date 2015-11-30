@@ -50,10 +50,14 @@
           <section id="calendar">
               <ul>
                 {% for day in site.calendar_days | sort: 'date' %}
+                  {% if day.date <= site.time %}
+                    {% assign active = true %}
+                  {% endif %}
                   {% assign humandate = day.date | date: "%-d" %}
-                  <li class="calendar__day{% if day.active %} active{% endif %}">
-                  {% if day.active %}
-                    <a href="#day{{ day.date }}" overlay="day{{ day.date }}" class="trigger-overlay"><span class="day"><strong>{{ humandate }}</strong></span></a>
+                  {% assign slugdate = day.date | date: "%d" %}
+                  <li class="calendar__day{% if active %} active{% endif %}">
+                  {% if active %}
+                    <a href="#day{{ slugdate }}" overlay="day{{ slugdate }}" class="trigger-overlay"><span class="day"><strong>{{ humandate }}</strong></span></a>
                     {% else %}
                       <span class="day"><strong>{{ humandate }}</strong></span>
                   {% endif %}
@@ -65,16 +69,18 @@
   </main>
 
   <!-- OVERLAYS -->
-
   {% for day in site.calendar_days %}
-    <div class="overlay overlay-contentscale overlay-day{{ day.date }}">
-      <div class="inner">
-        <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
-        <h3>{{ day.description }}</h3>
-        <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
-        <button type="button" overlay="day{{ day.date }}" class="overlay-close icon icon-close"></button>
+    {% if day.date <= site.time %}
+      {% assign slugdate = day.date | date: "%d" %}
+      <div class="overlay overlay-contentscale overlay-day{{ slugdate }}">
+        <div class="inner">
+          <h2><a target="_blank" href="{{ day.url }}">{{ day.title }}</a></h2>
+          <h3>{{ day.description }}</h3>
+          <a target="_blank" class="more"  href="{{ day.url }}">find out more</a>
+          <button type="button" overlay="day{{ slugdate }}" class="overlay-close icon icon-close"></button>
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endfor %}
 
   <footer>
